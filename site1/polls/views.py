@@ -14,6 +14,12 @@ def a(request):
         This fact served on port {request.get_port()}
                                         """)
 
+def a(request):
+    print(dir(request))
+    return HttpResponse(f"""
+    yooooooo url: {request.get_url()}
+    """)
+
 def login_form(request):
     return HttpResponse( """
 <html>
